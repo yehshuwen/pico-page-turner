@@ -1,0 +1,16 @@
+// page_turner.gatt
+
+// base information
+PRIMARY_SERVICE, GAP_SERVICE
+CHARACTERISTIC, GAP_DEVICE_NAME, READ, "Pico PageTurner"
+
+// battrey service
+#import <battery_service.gatt>
+
+// device information
+#import <device_information_service.gatt>
+
+// HID service
+#import <hids.gatt>
+PRIMARY_SERVICE, GATT_SERVICE
+CHARACTERISTIC, GATT_DATABASE_HASH, READ,

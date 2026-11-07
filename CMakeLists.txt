@@ -35,7 +35,9 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(page_turner page_turner.c )
+add_executable(page_turner page_turner.c ble_keyboard.c)
+
+pico_btstack_make_gatt_header(page_turner PRIVATE "${CMAKE_CURRENT_LIST_DIR}/page_turner.gatt")
 
 pico_set_program_name(page_turner "page_turner")
 pico_set_program_version(page_turner "0.1")
