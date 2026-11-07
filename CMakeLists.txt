@@ -56,6 +56,8 @@ target_include_directories(page_turner PRIVATE
 # Add any user requested libraries
 target_link_libraries(page_turner 
         pico_cyw43_arch_none
+        pico_btstack_ble        # BTstack 的 BLE 功能
+        pico_btstack_cyw43      # BTstack 和 CYW43 無線晶片之間的橋接
         )
 
 pico_add_extra_outputs(page_turner)
